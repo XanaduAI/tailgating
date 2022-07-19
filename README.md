@@ -12,7 +12,7 @@ The following functionality is supported:
 - Performing the tailgating procedure for an arbitrary gate set and supplied Hamiltonian derivatives
 - Calculating Hamiltonians and Hamiltonian derivatives of a range of different molecules
 
-This code runs on top of the [PennyLane](https://github.com/PennyLaneAI/pennylane) library for differentiable quantum programming. To build sparse representations of fermionic Hamiltonians and Hamiltonian derivatives for the examples, we utilize a prototype of the ``pennylane.hf`` module, which can be found [here](https://github.com/Lucaman99/autohf).
+This code runs on top of the [PennyLane](https://github.com/PennyLaneAI/pennylane) library for differentiable quantum programming. To build sparse representations of fermionic Hamiltonians and Hamiltonian derivatives for the examples, we utilize a prototype of the ``pennylane.hf`` module, which can be found [here](https://github.com/Lucaman99/autohf) and [here](https://github.com/Lucaman99/bigvqe).
 
 ## Installation
 
