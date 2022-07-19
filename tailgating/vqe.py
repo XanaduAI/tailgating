@@ -187,3 +187,23 @@ def compute_state(circuit, dev, optimal_params):
         return qml.state()
 
     return ansatz(optimal_params)
+
+
+def tailgate(dH, dev, circuit, operator_pool, params, tol=1e-6):
+    """Performs the tailgating procedure"""
+    gates = []
+    bar = tqdm(operator_pool)
+    n = []
+
+    for op in bar:
+        @qml.qnode(dev)
+        def cost_fn(param):
+            circuit(params)
+            op(param[0])
+            return qml.expval(dH)
+        gr = qml.grad(cost_fn)(np.array([0.0]))
+        if abs(gr) > tol:
+            gates.append(op)
+        else:
+            n.append(op)
+    return n, gates
