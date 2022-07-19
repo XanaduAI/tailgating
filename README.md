@@ -6,11 +6,11 @@ This repository contains the code used to produce the numerical results in the p
 <img src="tailgate.png", style="width:600px">
 </p>
 
-The following functionality is supported:
+The following functionality is supported in the code:
 
 - Performing variants of ADAPT-VQE, with respect to a supplied gate set and circuit
 - Performing the tailgating procedure for an arbitrary gate set and supplied Hamiltonian derivatives
-- Calculating Hamiltonians and Hamiltonian derivatives of a range of different molecules
+- Calculating energy Hessians using a state yielded from a variational circuit
 
 This code runs on top of the [PennyLane](https://github.com/PennyLaneAI/pennylane) library for differentiable quantum programming. To build sparse representations of fermionic Hamiltonians and Hamiltonian derivatives for the examples, we utilize a prototype of the ``pennylane.hf`` module, which can be found [here](https://github.com/Lucaman99/autohf) and [here](https://github.com/Lucaman99/bigvqe).
 
